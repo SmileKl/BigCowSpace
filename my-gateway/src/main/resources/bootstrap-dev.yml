@@ -1,0 +1,27 @@
+spring:
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos0423..
+      discovery:
+        server-addr: 124.222.96.147:8848
+        group: DEFAULT_GROUP
+      config:
+        server-addr: 124.222.96.147:8848
+        group: DEFAULT_GROUP
+        file-extension: yaml
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+
+  zipkin:
+    base-url: http://124.222.96.147:9411/
+    discoveryClientEnabled: false
+    sender:
+      type: web # 设置使用 http 的方式传输数据
+  sleuth:
+    sampler:
+      probability: 1 # 配置采样率，默认的采样比例为：0:1，即10%，所设置的值介于0-1之间，1则表示全部采集
+      rate: 10 # 为了使用速率限制采样器，选择每秒间隔接收的trace量，最小数字为0，最大值为2,147,483,647(最大int) 默认为10
+

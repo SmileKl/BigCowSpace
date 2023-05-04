@@ -1,0 +1,13 @@
+server:
+  port: 17929
+
+spring:
+  application:
+    name: v1-0-0-myGateway
+  profiles:
+    active: '@profiles.active@'
+
+reactor:
+  netty:
+    worker-count: 1000
+    select-count: 1

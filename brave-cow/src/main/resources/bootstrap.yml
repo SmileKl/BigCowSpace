@@ -1,0 +1,8 @@
+server:
+  port: 17930
+
+spring:
+  application:
+    name: v1-0-0-BraveCow
+  profiles:
+    active: '@profiles.active@'
